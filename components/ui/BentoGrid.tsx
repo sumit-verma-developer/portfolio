@@ -1,12 +1,15 @@
 // 'use client'
 "use client";
-import Lottie from "react-lottie";
+// import Lottie from "react-lottie";
 import { cn } from "../../utils/cn";
+// import { Globe } from "./Glob";
 import { BackgroundGradientAnimation } from "./GradientBg";
 import { GridGlobe } from "./GridGlobe";
 
 import animationData from "../../data/confetti.json";
 import { useState } from "react";
+import MagicButton from "./MagicButton";
+import { IoCopyOutline } from "react-icons/io5";
 
 export const BentoGrid = ({
   className,
@@ -51,6 +54,13 @@ export const BentoGridItem = ({
   spareImg?: string;
 }) => {
   const [copied, setCopied] = useState(false);
+  
+  const handleCopy=()=>{
+    navigator.clipboard.writeText('contact@testmail.com')
+    setCopied(true)
+  }
+
+
   return (
     <div
       className={cn(
@@ -63,7 +73,7 @@ export const BentoGridItem = ({
           "linear-gradient(90deg, rgba(2,0,36,1) 0%, rgba(69,144,154,1) 35%, rgba(0,212,255,1) 100%)",
       }}
     >
-      <div className={`${id === 6} && 'flex justify-center h-full`}>
+      <div className={`${id === 6 && 'flex justify-center'} h-full`}>
         <div className="w-full h-full absolute ">
           {img && (
             <img
@@ -88,7 +98,7 @@ export const BentoGridItem = ({
         </div>
         {id === 6 && (
           <BackgroundGradientAnimation>
-            <div className="absolute z-50  flex items-center justify-center text-white font-bold"></div>
+            {/* <div className="absolute z-50  flex items-center justify-center text-white font-bold"></div> */}
           </BackgroundGradientAnimation>
         )}
       </div>
@@ -138,7 +148,7 @@ export const BentoGridItem = ({
         {id === 6 && (
           <div className="mt-5 relative">
             <div className={`absolute -bottom-5 right-0`}>
-              <Lottie
+              {/* <Lottie
                 options={{
                   loop: copied,
                   autoplay: copied,
@@ -147,8 +157,15 @@ export const BentoGridItem = ({
                     preserveAspectRatio: "xMidYMid sclice",
                   },
                 }}
-              />
+              /> */}
             </div>
+            <MagicButton
+              title={copied ? "Email copied" : "copy my email"}
+              icon={<IoCopyOutline />}
+              position="left"
+              otherClasses="!bg-[#161a31]"
+              handleClick={handleCopy}
+            />
           </div>
         )}
         {/* {header} */}

@@ -60,7 +60,7 @@ const Hero = () => {
           />
 
           <p className="text-center md:tracking-wider mb-4 text-sm md:text-lg lg:text-2xl">
-            Hi! I&apos;m Sumit, a Next.js Developer based in india.
+            Hi! I&apos;m Sumit, a React native Developer based in india.
           </p>
 
           <a href="#about">

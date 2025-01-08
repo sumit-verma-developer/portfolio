@@ -60,7 +60,6 @@ export const BentoGridItem = ({
     setCopied(true)
   }
 
-
   return (
     <div
       className={cn(
@@ -70,7 +69,7 @@ export const BentoGridItem = ({
       style={{
         background: "rgb(4,7,29)",
         backgroundColor:
-          "linear-gradient(90deg, rgba(2,0,36,1) 0%, rgba(69,144,154,1) 35%, rgba(0,212,255,1) 100%)",
+          "linear-gradient(90deg, rgba(2,0,36,1) 0%, rgba(69,144,154,1) 35%, rgba(0,212,255,1) 100% )",
       }}
     >
       <div className={`${id === 6 && 'flex justify-center'} h-full`}>
@@ -98,7 +97,7 @@ export const BentoGridItem = ({
         </div>
         {id === 6 && (
           <BackgroundGradientAnimation>
-            {/* <div className="absolute z-50  flex items-center justify-center text-white font-bold"></div> */}
+
           </BackgroundGradientAnimation>
         )}
       </div>

@@ -423,8 +423,8 @@ export function GridGlobe() {
         <div className="absolute w-full h-72 md:h-full z-10">
           <World data={sampleArcs} globeConfig={globeConfig} />
         </div>
-    
-       
+
+
       </div>
     </div>
   );

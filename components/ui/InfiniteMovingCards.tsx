@@ -80,14 +80,14 @@ export const InfiniteMovingCards = ({
       <ul
         ref={scrollerRef}
         className={cn(
-          " flex min-w-full shrink-0 gap-15 py-4 w-max flex-nowrap",
+          "flex min-w-full w-max shrink-0 flex-nowrap py-6",
           start && "animate-scroll ",
           pauseOnHover && "hover:[animation-play-state:paused]"
         )}
       >
         {items.map((item, idx) => (
           <li
-            className="w-[90vw] max-w-full relative rounded-2xl border border-b-0 flex-shrink-0 border-slate-800 p-5 md:p-16 md:w-[60vw]"
+            className="mr-6 md:mr-3 w-[90vw] md:w-[60vw] relative rounded-2xl border border-slate-800 p-5 md:p-16 flex-shrink-0"
             style={{
               background: "rgb(4,7,29)",
               backgroundColor:
@@ -98,15 +98,18 @@ export const InfiniteMovingCards = ({
             <blockquote>
               <div
                 aria-hidden="true"
-                className="user-select-none -z-1 pointer-events-none absolute -left-0.5 -top-0.5 h-[calc(100%_+_4px)] w-[calc(100%_+_4px)]"
-              ></div>
+                className="user-select-none -z-1 pointer-events-none absolute -left-0.5 -top-0.5 h-[calc(100%_+_4px)] w-[calc(100%_+_4px)] align-middle"
+              >
+
+
+              </div>
               <span className=" relative z-20 text-sm  md:text-lg leading-[1.6] text-white font-normal ">
                 {item.quote}
               </span>
               <div className="relative z-20 mt-6 flex flex-row items-center">
                 <span className="flex flex-col gap-1">
                   <div className="me-3">
-                    <img src="/public/profile.svg" alt="profile" />
+                    <img src="/profile.svg" alt="profile" />
                   </div>
                   <div className="flex flex-col gap-1">
                     <span className=" text-xl leading-[1.6] text-white font-bold">

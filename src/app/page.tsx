@@ -9,6 +9,7 @@ import Clients from "../../components/ui/Clients";
 import Experience from "../../components/ui/Experience";
 import Approach from "../../components/ui/Approach";
 import Footer from "../../components/ui/Footer";
+import TechStack from "../../components/TechStack";
 
 export default function Home() {
   return (
@@ -18,6 +19,7 @@ export default function Home() {
         <Hero />
         <Grid />
         <RecentProjects />
+        <TechStack />
         <Clients />
         <Experience />
         <Approach />

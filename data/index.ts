@@ -196,7 +196,7 @@ export const workExperience = [
     company: "Jupiter Orison",
     location: "Gurugram",
     title: "Software Developer",
-    duration: "December 2022 - Present",
+    duration: "December 2022 - May 2025",
     desc: "Mobile application development company focused on delivering high-performance apps for Android and iOS platforms.",
     achievements: [
       "Developed and deployed high-performance mobile apps for Android and iOS using React Native",
@@ -229,7 +229,7 @@ export const socialMedia = [
   {
     id: 1,
     img: "/git.svg",
-    link: "https://github.com/sumitvermaofficial",
+    link: "https://github.com/sumit-verma-official?tab=projects",
   },
   {
     id: 2,
